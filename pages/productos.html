@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogo de Productos - Proyecto Desarrollo Web</title>
+</head>
+
+<body>
+
+    <header>
+        <h2>Sistema de Inventario</h2>
+        <nav>
+            <a href="home.html">Inicio</a> |
+            <a href="../index.html">Cerrar Sesion</a>
+        </nav>
+    </header>
+
+    <hr>
+
+    <main>
+
+        <!-- Cabecera -->
+        <section>
+            <h2>Catalogo de Productos</h2>
+            <button type="button" id="btn-mostrar-formulario">Registrar Producto</button>
+        </section>
+
+        <br>
+
+        <!-- Formulario para agregar / editar (oculto) -->
+        <section id="seccion-formulario" hidden>
+            <fieldset>
+                <legend id="titulo-formulario">Registrar Producto</legend>
+
+                <form id="formulario-producto">
+                    <p>
+                        <label for="nombre">Nombre:</label><br>
+                        <input type="text" id="nombre" required>
+                    </p>
+
+                    <p>
+                        <label for="marca">Marca:</label><br>
+                        <input type="text" id="marca" required>
+                    </p>
+
+                    <p>
+                        <label for="precio-unitario">Precio Unitario:</label><br>
+                        <input type="number" id="precio-unitario" step="0.01" required>
+                    </p>
+
+                    <p>
+                        <label for="cantidad">Cantidad:</label><br>
+                        <input type="number" id="cantidad" required>
+                    </p>
+
+                    <p>
+                        <label for="precio-venta">Precio de Venta:</label><br>
+                        <input type="number" id="precio-venta" step="0.01" required>
+                    </p>
+
+                    <p>
+                        <label for="fecha-alta">Fecha de Alta:</label><br>
+                        <input type="date" id="fecha-alta" required>
+                    </p>
+
+                    <button type="submit" id="btn-guardar">Guardar</button>
+                    <button type="button" id="btn-cancelar">Cancelar</button>
+                </form>
+            </fieldset>
+            <br>
+        </section>
+
+        <!-- Tabla de productos -->
+        <section>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Marca</th>
+                        <th>Precio Unitario</th>
+                        <th>Cantidad</th>
+                        <th>Precio de Venta</th>
+                        <th>Fecha de Alta</th>
+                        <th>Cantidad de Ganancia</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="cuerpo-tabla">
+                    <!-- Filas dinamicas generadas por JavaScript -->
+                </tbody>
+            </table>
+            <p id="mensaje-vacio">No hay productos registrados.</p>
+        </section>
+
+    </main>
+
+    <script src="../js/productos.js"></script>
+</body>
+
+</html>
