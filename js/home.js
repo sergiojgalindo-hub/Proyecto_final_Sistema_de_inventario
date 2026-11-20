@@ -12,9 +12,9 @@ if (usuarioGuardado) {
 // 2. Simulacion de datos obtenidos de una base de datos
 // (En modulos futuros estos datos vendran de un backend/base de datos)
 const datosUsuario = {
-    nombre: "Fermin Alonso Benitez Guardado",
-    correo: "alonso.benitez@correo.com",
-    telefono: "(667) 555-0123",
+    nombre: "Sergio Jesus Galindo Melendrez",
+    correo: "sj.galindo21@ino.uas.edu.mx",
+    telefono: "(667)7550910",
     ciudad: "Culiacan, Sinaloa"
 };
 
